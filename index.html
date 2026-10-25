@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chihye (Kelsey) Han</title>
-  <meta name="description" content="Chihye (Kelsey) Han, Ph.D. | NIH/NIMH">
+  <meta name="description" content="Chihye (Kelsey) Han, Ph.D.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..500&display=swap" rel="stylesheet">
@@ -17,10 +17,11 @@
       --rule: #e6e6e2;
       --link: #2c4a7a;
 
-      --wrap: 68rem;
+      --gap: 3rem;
       --gutter: clamp(1.25rem, 5vw, 4.5rem);
-      --label: 12rem;      /* hanging column for section names */
-      --measure: 35rem;    /* text column */
+      --label: 11rem;      /* hanging column for section names */
+      --measure: 40rem;    /* text column */
+      --wrap: calc(var(--label) + var(--gap) + var(--measure));
     }
     @media (prefers-color-scheme: dark) {
       :root { --paper: #16171a; --ink: #e6e6e3; --ink-soft: #c9cac7; --muted: #8f9298; --rule: #2a2c30; --link: #9db4e0; }
@@ -45,7 +46,7 @@
     a:hover { text-decoration-color: var(--muted); }
     a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 2px; }
 
-    .frame { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter) clamp(4rem, 12vh, 7rem); }
+    .frame { max-width: calc(var(--wrap) + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter) clamp(4rem, 12vh, 7rem); }
 
     /* Hero: the name is the one large typographic moment */
     .hero { padding-top: clamp(5rem, 22vh, 12rem); }
@@ -63,7 +64,7 @@
     .row {
       display: grid;
       grid-template-columns: var(--label) minmax(0, var(--measure));
-      column-gap: 2rem;
+      column-gap: var(--gap);
       padding-top: clamp(4.5rem, 13vh, 8rem);
     }
     .row > .label { grid-column: 1; }

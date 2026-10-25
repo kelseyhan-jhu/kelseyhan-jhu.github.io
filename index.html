@@ -1,137 +1,153 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Kelsey Han | Johns Hopkins University </title>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chihye (Kelsey) Han</title>
+  <meta name="description" content="Chihye (Kelsey) Han, Ph.D. | NIH/NIMH">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #fbfbfa;
+      --ink: #1d1f23;
+      --ink-soft: #3c3f45;
+      --muted: #74777e;
+      --rule: #e6e6e2;
+      --link: #2c4a7a;
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    
-    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <center>
-        <img src="images/profile.jpg" alt="Profile" WIDTH=190 style="margin-bottom: 8px;border-radius: 10px;">
-        <h1>Chihye Han (Kelsey)</h1>
-        <p>Department of Cognitive Science</br>
-        Johns Hopkins University</br>
-        <a href="mailto:chan21@jhu.edu">chan21@jhu.edu</a></p>
-	<a href="han_cv.pdf" style="margin-right:14px;"><i class="ai ai-cv" style="font-size: 32px;"></i>
-        </a>
-        <a href="https://github.com/kelseyhan-jhu" style="margin-right:14px;">
-          <i class="fa fa-github" style="font-size:32px;"></i>
-        </a>
-        <a href="https://scholar.google.com/citations?hl=en&user=ZN77OiqrzrIC" onclick="_gaq.push(['_trackEvent', 'Click', 'Scholar Clicked']);" style="margin-right:14px;">
-          <i class="ai ai-google-scholar big-icon" style="font-size:32px;"></i>
-        </a>
-        <a href="https://twitter.com/ckelseyhan" onclick="_gaq.push(['_trackEvent', 'Click', 'Twitter Clicked']);">
-          <i class="fa fa-twitter" style="font-size:32px;"></i>
-        </a>
-        <br>
-        </center>
-      </header>
-      <section>
-        <p>I am a Ph.D. candidate in Cognitive Science at Johns Hopkins University, advised by Prof. Michael F. Bonner. I study the neural basis of visual experience using computational modeling, neuroimaging, and deep learning approaches. My research focuses on understanding how high-dimensional neural geometries give rise to complex, rich visual perception.</p>
+      --wrap: 68rem;
+      --gutter: clamp(1.25rem, 5vw, 4.5rem);
+      --label: 12rem;      /* hanging column for section names */
+      --measure: 35rem;    /* text column */
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #16171a; --ink: #e6e6e3; --ink-soft: #c9cac7; --muted: #8f9298; --rule: #2a2c30; --link: #9db4e0; }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Source Serif 4", Georgia, serif;
+      font-optical-sizing: auto;
+      font-weight: 360;
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      font-variant-numeric: oldstyle-nums;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    p, li { text-wrap: pretty; }
+    a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); text-decoration-thickness: 1px; text-underline-offset: 0.22em; }
+    a:hover { text-decoration-color: var(--muted); }
+    a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 2px; }
 
-        <p>Previously, I received my M.S. from KAIST and B.A. from Carleton College. I have also worked at LG AI Research and Samsung Electronics.</p>
+    .frame { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter) clamp(4rem, 12vh, 7rem); }
 
-        <h3>Updates</h3>
-        <ul>
-          <li>Jan 2026: Our paper on individual differences in visual experience published in <a href="https://authors.elsevier.com/c/1mU7a3QW8SA5XU">Current Biology</a>!</li>
-          <li>Aug 2025: Presented at CCN 2025 in Amsterdam, Netherlands.</li>
-          <li>Mar 2025: <a href="https://arxiv.org/abs/2505.12653">New preprint</a> on high-dimensional structure underlying individual differences in naturalistic visual experience.</li>
-          <li>Aug 2024: Presented at CCN 2024 in Boston, MA.</li>
-          <li>May 2024: Presented at VSS 2024 in St. Petersburg, FL.</li>
+    /* Hero: the name is the one large typographic moment */
+    .hero { padding-top: clamp(5rem, 22vh, 12rem); }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+      font-weight: 360;
+      line-height: 1.1;
+      letter-spacing: -0.005em;
+    }
+    .role { margin: 0.9rem 0 0; font-size: 1rem; color: var(--muted); }
+    .links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.4rem; margin: 0.6rem 0 0; padding: 0; list-style: none; font-size: 0.98rem; }
+
+    /* Everything below the hero hangs from one vertical axis */
+    .row {
+      display: grid;
+      grid-template-columns: var(--label) minmax(0, var(--measure));
+      column-gap: 2rem;
+      padding-top: clamp(4.5rem, 13vh, 8rem);
+    }
+    .row > .label { grid-column: 1; }
+    .row > .body { grid-column: 2; }
+
+    h2 { margin: 0; font-size: 0.95rem; font-weight: 400; color: var(--muted); padding-top: 0.15rem; }
+
+    .about p { margin: 0 0 1rem; color: var(--ink-soft); }
+    .about p:last-child { margin-bottom: 0; }
+
+    ol.news, ul.work { list-style: none; margin: 0; padding: 0; }
+    ol.news li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1.25rem; align-items: baseline; padding: 0.5rem 0; }
+    ol.news li:first-child { padding-top: 0; }
+    ol.news time { color: var(--muted); font-size: 0.9rem; font-variant-numeric: lining-nums tabular-nums; }
+
+    ul.work li { padding: 0.9rem 0; }
+    ul.work li:first-child { padding-top: 0; }
+    .work a { color: var(--ink); text-decoration: none; }
+    .work a:hover { text-decoration: underline; text-decoration-color: var(--muted); }
+    .meta { display: block; margin-top: 0.2rem; color: var(--muted); font-size: 0.92rem; }
+
+    @media (max-width: 760px) {
+      .row { grid-template-columns: minmax(0, 1fr); }
+      .row > .label, .row > .body { grid-column: 1; }
+      .row > .label { margin-bottom: 0.9rem; }
+      .hero { padding-top: 3.5rem; }
+        ol.news li { grid-template-columns: 1fr; gap: 0.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <header class="hero">
+      <h1>Chihye (Kelsey) Han</h1>
+      <p class="role">Postdoctoral fellow, NIH/NIMH</p>
+      <ul class="links">
+        <li><a href="mailto:ckelseyhan@gmail.com">Email</a></li>
+        <li><a href="han_cv.pdf">CV</a></li>
+        <li><a href="https://scholar.google.com/citations?hl=en&amp;user=ZN77OiqrzrIC">Scholar</a></li>
+        <li><a href="https://github.com/kelseyhan-jhu">GitHub</a></li>
+      </ul>
+    </header>
+
+    <section class="row" aria-labelledby="about">
+      <h2 class="label" id="about">About</h2>
+      <div class="body about">
+        <p>I'm a computational cognitive neuroscientist working with Chris Baker in the Laboratory of Brain and Cognition at NIMH.</p>
+        <p>My broad interest is understanding the nature of neural representations in biological and artificial systems: What is their representational structure and content? What is shared versus unique across systems and individuals? How do they support downstream behavior? To investigate these questions, I use computational modeling, neuroimaging, and behavioral methods. My <a href="https://jscholarship.library.jhu.edu/handle/1774.2/72435">dissertation</a> studied how high-dimensional neural geometry underlies visual experience, focusing on the representational properties that support rich visual perception and the analysis methods for characterizing them.</p>
+        <p>I received my Ph.D. in Cognitive Science (Computational Track) from Johns Hopkins University, where I was fortunate to be advised by Mick Bonner. Before that, I earned an M.S. in Electrical Engineering from KAIST and a B.A. in Cognitive Science from Carleton College, with honors in music performance. I also worked at LG AI Research and Samsung Electronics.</p>
+        <p>Outside of work, I enjoy exploring the city, reading, and movie nights with my partner, <a href="https://yrockoh.github.io/">Youngrock</a>.</p>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="news">
+      <h2 class="label" id="news">News</h2>
+      <ol class="news body">
+        <li><time>Oct 2026</time><span>Joined Chris Baker's lab at NIMH as a postdoctoral fellow.</span></li>
+        <li><time>Jul 2026</time><span>Defended my Ph.D. at Johns Hopkins.</span></li>
+        <li><time>Jun 2026</time><span>Invited talk at Cold Spring Harbor Laboratory.</span></li>
+        <li><time>May 2026</time><span>Invited talks at Dartmouth and NIH; poster at VSS.</span></li>
+        <li><time>Apr 2026</time><span>Invited talks at Freie Universität Berlin and the Institute for Basic Science.</span></li>
+        <li><time>Jan 2026</time><span>Paper on individual differences in visual experience out in <a href="https://www.cell.com/current-biology/fulltext/S0960-9822(25)01692-6"><i>Current Biology</i></a>.</span></li>
+      </ol>
+    </section>
+
+    <section class="row" aria-labelledby="work">
+      <h2 class="label" id="work">Selected work</h2>
+      <div class="body">
+        <ul class="work">
+          <li>
+            <a href="https://www.cell.com/current-biology/fulltext/S0960-9822(25)01692-6">High-dimensional structure underlying individual differences in naturalistic visual experience</a>
+            <span class="meta">Han &amp; Bonner. <i>Current Biology</i>, 2026</span>
+          </li>
+          <li>
+            Low-variance dimensions of cortical activity carry behaviorally relevant information
+            <span class="meta">Han &amp; Bonner. <i>VSS</i>, 2026</span>
+          </li>
+          <li>
+            <a href="https://2025.ccneuro.org/abstract_pdf/Han_2025_Behavioral_relevance_high-dimensional_neural_representations.pdf">Behavioral relevance of high-dimensional neural representations</a>
+            <span class="meta">Han, Gauthaman &amp; Bonner. <i>CCN</i>, 2025</span>
+          </li>
         </ul>
-
-        <h3>Research</h3>
-        <table style="margin-top:-12px;">
-                <tr style="border-bottom:1px solid #e5e5e5;">
-                  <td>
-                    <img src="images/indiv.png" alt="Individual difference">
-                  </td>
-                  <td>
-                    <b><a href="https://www.cell.com/current-biology/fulltext/S0960-9822(25)01692-6">High-dimensional structure underlying individual differences in naturalistic visual experience</a></b>
-                    <br><i>Current Biology</i>
-                    <br><br>
-                    <p>How do different brains create unique visual experiences from identical sensory input? We reveal that individual visual experience emerges from a high-dimensional neural geometry across the visual cortical hierarchy.</p>
-                    <p>Han, C. & Bonner, M.F.</p>
-                  </td>
-                </tr>
-                <tr style="border-bottom:1px solid #e5e5e5;">
-                  <td>
-                    <img src="images/ccn2025.png" alt="Behavioral relevance">
-                  </td>
-                  <td>
-                    <b><a href="https://2025.ccneuro.org/abstract_pdf/Han_2025_Behavioral_relevance_high-dimensional_neural_representations.pdf">Behavioral relevance of high-dimensional neural representations</a></b>
-                    <br><i>Cognitive Computational Neuroscience</i>
-                    <br><br>
-                    <p>Does behavioral relevance extend throughout high-dimensional neural representations or is it restricted to interpretable, high-variance dimensions? We show that humans can perceive coherent structure in image clusters formed along principal components spanning the entire spectrum of ventral visual stream responses, suggesting that behaviorally relevant information is distributed across the full range of neural dimensions.</p>
-                    <p>Han, C., Gauthaman, R.M., & Bonner, M.F.</p>
-                  </td>
-                </tr>
-                <tr style="border-bottom:1px solid #e5e5e5;">
-                  <td>
-                    <img src="images/quantsem.png" alt="Semantic dimensionality">
-                  </td>
-                  <td>
-                    <b><a href="VSS_Han_presentation.pdf">Quantifying the latent semantic content of visual representations</a></b>
-                    <br><i>Vision Sciences Society</i>
-                    <br><br>
-                    <p>How does visual cortex extract semantic meaning from images? We developed a statistical measure called semantic dimensionality that quantifies the number of language-derived semantic properties that can be decoded from image-computable perceptual features.</p>
-                    <p>Han, C., Magri, C., & Bonner, M.F.</p>
-                  </td>
-                </tr>
-                <tr style="border-bottom:1px solid #e5e5e5;">
-                  <td>
-                    <img src="images/mhsan.png" alt="MHSAN">
-                  </td>
-                  <td>
-                    <b><a href="https://ieeexplore.ieee.org/document/9093548">MHSAN: Multi-head self-attention network for visual semantic embedding</a></b>
-                    <br><i>WACV</i>
-                    <br><br>
-                    <p>We propose a multi-head self-attention network to attend to various components of visual and textual data, achieving state-of-the-art results in image-text retrieval tasks.</p>
-                    <p>Park, G., Han, C., Yoon, W., & Kim, D.</p>
-                  </td>
-                </tr>
-                <tr style="border-bottom:1px solid #e5e5e5;">
-                  <td>
-                    <img src="images/adversarialfMRI.png" alt="Adversarial fMRI">
-                  </td>
-                  <td>
-                    <b><a href="https://ieeexplore.ieee.org/document/8851763">Representation of adversarial examples in humans and deep neural networks: an fMRI study</a></b>
-                    <br><i>IJCNN</i>
-                    <br><br>
-                    <p>We compare the visual representations of adversarial examples in deep neural networks and humans using fMRI and representational similarity analysis.</p>
-                    <p>Han, C., Yoon, W., Kwon, G., Nam, S., & Kim, D.</p>
-                  </td>
-                </tr>
-                <tr style="border-bottom:1px solid #e5e5e5;">
-                  <td>
-                    <img src="images/3dbrain.png" alt="3D brain">
-                  </td>
-                  <td>
-                    <b><a href="https://arxiv.org/abs/1908.02498">Generation of 3D brain MRI using auto-encoding generative adversarial networks</a></b>
-                    <br><i>MICCAI</i>
-                    <br><br>
-                    <p>We generate realistic brain MR images of multiple types and modalities from scratch using alpha-GAN with WGAN-GP.</p>
-                    <p>Kwon, G., Han, C., & Kim, D.</p>
-                  </td>
-                </tr>
-        </table>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-  </body>
+      </div>
+    </section>
+  </div>
+</body>
 </html>
